@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[9]:
 
 
 import numpy as np
@@ -101,14 +101,14 @@ def shuffle(deck_list):
         left_deck, right_deck = np.array(['L'+str(x) for x in range(0, random_value)]), np.array(['R'+str(x) for x in range(random_value, len(deck_list))])
         i+=1  
     display_distribution(shuffled_deck,'shuffled_deck')    
-    
+    print ("No. of shuffles", i+1)
     return shuffled_deck    
             
 print ("Enter Number of deck")        
 total_no = int(input())    
 
 st = time.time()
-print ("total no", total_no)
+print ("total no of cards in deck", total_no)
 input_deck = np.array(range(0, total_no))
 shuffled_deck = shuffle(input_deck)
 print ("Time Taken", (time.time()-st))
